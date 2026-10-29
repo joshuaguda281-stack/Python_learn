@@ -1,4 +1,6 @@
 .venv/
 .idea/
-.mp3
-.txt
+*.mp3
+*.txt
+!/requirements.txt
+!/data.txt

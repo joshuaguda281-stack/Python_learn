@@ -32,5 +32,14 @@ students =[{"name":"Emerald Bowen","email":"ullamcorper.nisl@yahoo.org","country
 # print(avg)
 
 # lamda expression
-# TODO sort the list / filter, sort, 
+#  sort the list / filter, sort,
+# lambda s: s['age']
+def get_key(student):
+    return student["age"]
 
+age_sorted = sorted(students, key=lambda x: x["age"], reverse=True)
+
+for student in age_sorted:
+ print(student)
+
+# Get the oldest person from Nigeria

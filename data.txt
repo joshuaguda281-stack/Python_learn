@@ -1,0 +1,4 @@
+dob:2025-01-18
+gender:male
+color:black
+name:Donald

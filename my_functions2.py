@@ -13,10 +13,9 @@ def add(x, y,z):
 # print(res)
 
 def addition(z,*nums):
-    total = 0
+    total = z
     for num in nums:
         total += num
-    total = sum(nums)
     return total
 # key and word arguments **kwargs
 def save(**data):
@@ -43,11 +42,11 @@ def cylinder(r,h):
      radius and height of cylinder
     :returns volume and surface area
     """
-    v= 22/7 * r * h
+    v= 22/7 * r * r * h
     sa = 22/7 * r **2 *2 + 22/7* r * 2 * h
     return v, sa
 
-surf_area, volume = cylinder(r=20, h=10)
+volume, surf_area = cylinder(r=20, h=10)
 print(surf_area, volume)
 
 sum([1,2,3])

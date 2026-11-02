@@ -1,4 +1,5 @@
 #inheritance
+from encodings import cp1006
 
 
 # employees -- name, id, department, gender
@@ -22,6 +23,8 @@ class Employee:
         if hasattr(self, "rate"):
             print(self.rate)
         print("-----------------------------")
+    def print_name(self):
+        print(f"Name is: {self.name}")
 class salariedEmployee(Employee):
      def __init__(self, name:str, id_no:str, department:str, gender:str, tenure, salary:float):
          super().__init__(name, id_no, department, gender)
@@ -42,3 +45,5 @@ c2 = CasualWorkers(name="jack onyango", id_no="234756", department="Construction
 s1.print_employee_info()
 c2.print_employee_info()
 print("Wages for casual worker: ", c2.calc_wages(23))
+
+s1.print_name()

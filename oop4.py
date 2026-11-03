@@ -37,13 +37,20 @@ class CasualWorkers(Employee):
         self.rate = rate
     def calc_wages(self, hours_worked: float):
         return self.rate * hours_worked
+    # overriding the print_employee_info method to include rate
+    def print_details(self):
+        super().print_employee_info()
+        print(f"Name: {self.name}, ID: {self.id_no}, Department: {self.department}, Gender: {self.gender}, Rate: {self.rate}")
 
 
 s1 = salariedEmployee("Sarang Guen", "234756", "Construction", "Male", 5, 95000)
 c2 = CasualWorkers(name="jack onyango", id_no="234756", department="Construction", gender="Male", rate=465.00)
 
 s1.print_employee_info()
-c2.print_employee_info()
+c2.print_details()
 print("Wages for casual worker: ", c2.calc_wages(23))
 
 s1.print_name()
+
+
+# module ==files and package
